@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Afegir Empresa</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+<h1>Afegir Empresa</h1>
+<form action="#" th:action="@{/empresas/nueva}" th:object="${empresa}" method="post">
+  <p>Nom: <input type="text" th:field="*{nombre}"/></p>
+  <p>Adreça: <input type="text" th:field="*{direccion}"/></p>
+  <p>CIF: <input type="text" th:field="*{cif}"/></p>
+  <button type="submit">Afegir</button>
+</form>
+</body>
+</html>
