@@ -24,6 +24,7 @@ public class AlumneControlador {
     public String llistarAlumnes(Model model) {
         List<Alumne> alumnes = alumneRepository.findAll();
         model.addAttribute("alumnes", alumnes);
+        model.addAttribute("empresas", empresaRepository.findAll());
         return "listadoAlumnes";
     }
 

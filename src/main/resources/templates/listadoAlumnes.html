@@ -17,13 +17,13 @@
   </tr>
   </thead>
   <tbody>
-  <tr th:each="alumno : ${alumnos}">
+  <tr th:each="alumno : ${alumnes}">
     <td th:text="${alumno.nom}"></td>
     <td th:text="${alumno.cognoms}"></td>
     <td th:text="${alumno.cicle}"></td>
     <td th:text="${alumno.modalitat}"></td>
     <td th:text="${alumno.estatPractiques}"></td>
-    <td th:text="${alumno.empresa.nom}"></td>
+    <td th:text="${alumno.empresa.nombre}"></td>
   </tr>
   </tbody>
 </table>

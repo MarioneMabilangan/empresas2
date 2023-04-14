@@ -27,7 +27,7 @@
   <label>Empresa:</label>
   <select th:field="*{empresa}">
     <option value="">Selecciona una empresa</option>
-    <option th:each="emp : ${empresas}" th:value="${emp}" th:text="${emp.nom}" />
+    <option th:each="emp : ${empresas}" th:value="${emp.cif}" th:text="${emp.nombre}" />
   </select>
 
   <br /><br />

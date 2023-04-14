@@ -1,13 +1,11 @@
 package com.example.empreses.entitats;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 @Entity
 public class Alumne {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nom;
@@ -20,7 +18,7 @@ public class Alumne {
 
     private String estatPractiques;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "empresa_cif")
     private Empresa empresa;
 
@@ -74,6 +72,10 @@ public class Alumne {
 
     public Empresa getEmpresa() {
         return empresa;
+    }
+
+    public String getNombre() {
+        return empresa.getNombre();
     }
 
     public void setEmpresa(Empresa empresa) {
