@@ -28,14 +28,14 @@ public class AlumneControlador {
         return "listadoAlumnes";
     }
 
-    @GetMapping("/formAlumne")
+    @GetMapping("/alumnes/nueva")
     public String formulariAlumne(Model model) {
         model.addAttribute("alumne", new Alumne());
         model.addAttribute("empresas", empresaRepository.findAll());
         return "formularioAlumne";
     }
 
-    @PostMapping("/formAlumne")
+    @PostMapping("/alumnes/nueva")
     public String afegirAlumne(@ModelAttribute("alumne") Alumne alumne) {
         alumneRepository.save(alumne);
         return "redirect:/alumnes";
